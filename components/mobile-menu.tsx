@@ -48,9 +48,11 @@ export function MobileMenu() {
             >
               Contact
             </Link>
-            <Button className="bg-gradient-to-r from-cyan-500 to-blue-500 hover:from-cyan-600 hover:to-blue-600 w-full mt-4">
-              <Phone className="mr-2 h-4 w-4" />
-              Bel: 015 - 785 148 40
+            <Button asChild className="bg-gradient-to-r from-cyan-500 to-blue-500 hover:from-cyan-600 hover:to-blue-600 w-full mt-4">
+              <a href="tel:0157851840">
+                <Phone className="mr-2 h-4 w-4" />
+                Bel: 015 - 785 148 40
+              </a>
             </Button>
           </nav>
         </div>

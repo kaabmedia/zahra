@@ -94,9 +94,11 @@ export default function Home() {
             </Link>
           </nav>
           <div className="flex items-center gap-2">
-            <Button className="hidden sm:flex bg-gradient-to-r from-cyan-500 to-blue-500 hover:from-cyan-600 hover:to-blue-600">
-              <Phone className="mr-2 h-4 w-4" />
-              Bel: 015 - 785 148 40
+            <Button asChild className="hidden sm:flex bg-gradient-to-r from-cyan-500 to-blue-500 hover:from-cyan-600 hover:to-blue-600">
+              <a href="tel:0157851840">
+                <Phone className="mr-2 h-4 w-4" />
+                Bel: 015 - 785 148 40
+              </a>
             </Button>
             <MobileMenu />
           </div>
@@ -109,10 +111,10 @@ export default function Home() {
         <div className="container relative px-4 md:px-8 py-20 md:py-32">
           <div className="grid lg:grid-cols-2 gap-12 items-center">
             <div className="space-y-8">
-              <div className="inline-flex items-center rounded-full border px-4 py-1.5 text-sm bg-white shadow-sm">
+              <a href="mailto:kleermakerij.zahra@hotmail.com" className="inline-flex items-center rounded-full border px-4 py-1.5 text-sm bg-white shadow-sm hover:bg-gray-50 transition-colors">
                 <Mail className="mr-2 h-4 w-4 text-primary" />
                 <span className="text-muted-foreground">kleermakerij.zahra@hotmail.com</span>
-              </div>
+              </a>
               <h1 className="text-5xl md:text-6xl lg:text-7xl font-bold tracking-tight">
                 Jouw Kleermaker in{" "}
                 <span className="bg-gradient-to-r from-cyan-500 to-blue-500 bg-clip-text text-transparent">
@@ -124,12 +126,16 @@ export default function Home() {
                 reparatie, gordijnen op maat en stomerij in Delft.
               </p>
               <div className="flex flex-col sm:flex-row gap-4">
-                <Button size="lg" className="bg-gradient-to-r from-cyan-500 to-blue-500 hover:from-cyan-600 hover:to-blue-600 text-lg">
-                  <Phone className="mr-2 h-5 w-5" />
-                  Bel: 015 - 785 148 40
+                <Button asChild size="lg" className="bg-gradient-to-r from-cyan-500 to-blue-500 hover:from-cyan-600 hover:to-blue-600 text-lg">
+                  <a href="tel:0157851840">
+                    <Phone className="mr-2 h-5 w-5" />
+                    Bel: 015 - 785 148 40
+                  </a>
                 </Button>
-                <Button size="lg" variant="outline" className="text-lg">
-                  Diensten
+                <Button asChild size="lg" variant="outline" className="text-lg">
+                  <a href="#diensten">
+                    Diensten
+                  </a>
                 </Button>
               </div>
             </div>
@@ -281,34 +287,42 @@ export default function Home() {
             </p>
             
             <div className="grid md:grid-cols-3 gap-6 mb-12">
-              <Card className="bg-white/10 border-white/20 backdrop-blur-sm hover:bg-white/20 transition-all">
-                <CardContent className="p-6 text-center">
-                  <Phone className="h-8 w-8 mx-auto mb-4" />
-                  <h3 className="font-semibold mb-2">Bel ons</h3>
-                  <p className="text-white/90">015 - 785 148 40</p>
-                </CardContent>
-              </Card>
+              <a href="tel:0157851840" className="block">
+                <Card className="bg-white/10 border-white/20 backdrop-blur-sm hover:bg-white/20 transition-all cursor-pointer h-full">
+                  <CardContent className="p-6 text-center">
+                    <Phone className="h-8 w-8 mx-auto mb-4" />
+                    <h3 className="font-semibold mb-2">Bel ons</h3>
+                    <p className="text-white/90">015 - 785 148 40</p>
+                  </CardContent>
+                </Card>
+              </a>
               
-              <Card className="bg-white/10 border-white/20 backdrop-blur-sm hover:bg-white/20 transition-all">
-                <CardContent className="p-6 text-center">
-                  <Mail className="h-8 w-8 mx-auto mb-4" />
-                  <h3 className="font-semibold mb-2">Email ons</h3>
-                  <p className="text-white/90 text-sm break-all">kleermakerij.zahra@hotmail.com</p>
-                </CardContent>
-              </Card>
+              <a href="mailto:kleermakerij.zahra@hotmail.com" className="block">
+                <Card className="bg-white/10 border-white/20 backdrop-blur-sm hover:bg-white/20 transition-all cursor-pointer h-full">
+                  <CardContent className="p-6 text-center">
+                    <Mail className="h-8 w-8 mx-auto mb-4" />
+                    <h3 className="font-semibold mb-2">Email ons</h3>
+                    <p className="text-white/90 text-sm break-all">kleermakerij.zahra@hotmail.com</p>
+                  </CardContent>
+                </Card>
+              </a>
               
-              <Card className="bg-white/10 border-white/20 backdrop-blur-sm hover:bg-white/20 transition-all">
-                <CardContent className="p-6 text-center">
-                  <MapPin className="h-8 w-8 mx-auto mb-4" />
-                  <h3 className="font-semibold mb-2">Bezoek ons</h3>
-                  <p className="text-white/90">Oosthaven 52<br />2611 RB Delft</p>
-                </CardContent>
-              </Card>
+              <a href="https://www.google.com/maps/search/?api=1&query=Oosthaven+52,+2611+RB+Delft" target="_blank" rel="noopener noreferrer" className="block">
+                <Card className="bg-white/10 border-white/20 backdrop-blur-sm hover:bg-white/20 transition-all cursor-pointer h-full">
+                  <CardContent className="p-6 text-center">
+                    <MapPin className="h-8 w-8 mx-auto mb-4" />
+                    <h3 className="font-semibold mb-2">Bezoek ons</h3>
+                    <p className="text-white/90">Oosthaven 52<br />2611 RB Delft</p>
+                  </CardContent>
+                </Card>
+              </a>
             </div>
             
-            <Button size="lg" variant="secondary" className="text-lg">
-              <Phone className="mr-2 h-5 w-5" />
-              Bel nu: 015 - 785 148 40
+            <Button asChild size="lg" variant="secondary" className="text-lg">
+              <a href="tel:0157851840">
+                <Phone className="mr-2 h-5 w-5" />
+                Bel nu: 015 - 785 148 40
+              </a>
             </Button>
           </div>
         </div>
@@ -334,14 +348,14 @@ export default function Home() {
                   <MapPin className="h-4 w-4 mt-0.5 flex-shrink-0" />
                   <span>Oosthaven 52<br />2611 RB Delft</span>
                 </div>
-                <div className="flex items-center gap-2">
+                <a href="tel:0157851840" className="flex items-center gap-2 hover:text-cyan-400 transition-colors">
                   <Phone className="h-4 w-4 flex-shrink-0" />
                   <span>015 - 785 148 40</span>
-                </div>
-                <div className="flex items-start gap-2">
+                </a>
+                <a href="mailto:kleermakerij.zahra@hotmail.com" className="flex items-start gap-2 hover:text-cyan-400 transition-colors">
                   <Mail className="h-4 w-4 mt-0.5 flex-shrink-0" />
                   <span className="break-all">kleermakerij.zahra@hotmail.com</span>
-                </div>
+                </a>
               </div>
             </div>
             
@@ -371,10 +385,10 @@ export default function Home() {
                 <p>Zo: Gesloten</p>
               </div>
               <div className="mt-4">
-                <Link href="https://facebook.com" className="inline-flex items-center gap-2 text-gray-400 hover:text-cyan-400 transition-colors">
+                <a href="https://facebook.com" target="_blank" rel="noopener noreferrer" className="inline-flex items-center gap-2 text-gray-400 hover:text-cyan-400 transition-colors">
                   <Facebook className="h-5 w-5" />
                   <span>Facebook</span>
-                </Link>
+                </a>
               </div>
             </div>
           </div>

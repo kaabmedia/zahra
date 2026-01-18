@@ -9,6 +9,14 @@ export const metadata: Metadata = {
   description: 'Ontdek de perfecte pasvorm en vakmanschap bij Kleermakerij Zahra. Alles voor maatkleding, reparatie, gordijnen op maat en stomerij in Delft.',
   keywords: 'kleermaker, kleermakerij, Delft, maatkleding, kledingreparatie, gordijnen op maat, stomerij, Zahra, Oosthaven',
   authors: [{ name: 'Zahra Kleermakerij' }],
+  icons: {
+    icon: [
+      { url: '/favicon.svg', type: 'image/svg+xml' },
+    ],
+    apple: [
+      { url: '/apple-icon.svg', type: 'image/svg+xml' },
+    ],
+  },
   openGraph: {
     title: 'Zahra Kleermakerij - Uw Kleermaker in Delft',
     description: 'Ontdek de perfecte pasvorm en vakmanschap bij Kleermakerij Zahra.',

@@ -26,7 +26,7 @@ export function MobileMenu() {
 
       {isOpen && (
         <div className="fixed inset-0 top-20 z-50 bg-white md:hidden">
-          <nav className="container flex flex-col space-y-4 p-6">
+          <nav className="container flex flex-col space-y-4 p-6 bg-white">
             <Link
               href="#diensten"
               className="text-lg font-medium hover:text-primary transition-colors py-2"
@@ -49,9 +49,9 @@ export function MobileMenu() {
               Contact
             </Link>
             <Button asChild className="bg-gradient-to-r from-cyan-500 to-blue-500 hover:from-cyan-600 hover:to-blue-600 w-full mt-4">
-              <a href="tel:0157851840">
-                <Phone className="mr-2 h-4 w-4" />
-                Bel: 015 - 785 148 40
+              <a href="tel:0157851840" className="inline-flex items-center gap-2">
+                <Phone className="h-4 w-4" />
+                015 - 785 148 40
               </a>
             </Button>
           </nav>

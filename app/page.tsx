@@ -95,9 +95,9 @@ export default function Home() {
           </nav>
           <div className="flex items-center gap-2">
             <Button asChild className="hidden sm:flex bg-gradient-to-r from-cyan-500 to-blue-500 hover:from-cyan-600 hover:to-blue-600">
-              <a href="tel:0157851840">
-                <Phone className="mr-2 h-4 w-4" />
-                Bel: 015 - 785 148 40
+              <a href="tel:0157851840" className="inline-flex items-center gap-2">
+                <Phone className="h-4 w-4" />
+                015 - 785 148 40
               </a>
             </Button>
             <MobileMenu />
@@ -127,9 +127,9 @@ export default function Home() {
               </p>
               <div className="flex flex-col sm:flex-row gap-4">
                 <Button asChild size="lg" className="bg-gradient-to-r from-cyan-500 to-blue-500 hover:from-cyan-600 hover:to-blue-600 text-lg">
-                  <a href="tel:0157851840">
-                    <Phone className="mr-2 h-5 w-5" />
-                    Bel: 015 - 785 148 40
+                  <a href="tel:0157851840" className="inline-flex items-center gap-2">
+                    <Phone className="h-5 w-5" />
+                    015 - 785 148 40
                   </a>
                 </Button>
                 <Button asChild size="lg" variant="outline" className="text-lg">
@@ -142,8 +142,8 @@ export default function Home() {
             <div className="relative">
               <div className="absolute inset-0 bg-gradient-to-r from-cyan-500 to-blue-500 rounded-3xl blur-3xl opacity-20" />
               <img
-                src="https://images.unsplash.com/photo-1581235720704-06d3acfcb36f?w=800&q=80"
-                alt="Kleermaker aan het werk"
+                src="https://images.unsplash.com/photo-1512436991641-6745cdb1723f?w=1200&q=80"
+                alt="Kleermaker werkt met stof en maatlint"
                 className="relative rounded-3xl shadow-2xl w-full h-[500px] object-cover"
               />
             </div>
@@ -291,7 +291,7 @@ export default function Home() {
                 <Card className="bg-white/10 border-white/20 backdrop-blur-sm hover:bg-white/20 transition-all cursor-pointer h-full">
                   <CardContent className="p-6 text-center">
                     <Phone className="h-8 w-8 mx-auto mb-4" />
-                    <h3 className="font-semibold mb-2">Bel ons</h3>
+                    <h3 className="font-semibold mb-2">Telefoon</h3>
                     <p className="text-white/90">015 - 785 148 40</p>
                   </CardContent>
                 </Card>
@@ -319,9 +319,9 @@ export default function Home() {
             </div>
             
             <Button asChild size="lg" variant="secondary" className="text-lg">
-              <a href="tel:0157851840">
-                <Phone className="mr-2 h-5 w-5" />
-                Bel nu: 015 - 785 148 40
+              <a href="tel:0157851840" className="inline-flex items-center gap-2">
+                <Phone className="h-5 w-5" />
+                015 - 785 148 40
               </a>
             </Button>
           </div>

@@ -1,0 +1,16 @@
+{
+  "name": "Zahra Kleermakerij",
+  "short_name": "Zahra",
+  "description": "Uw kleermaker in Delft voor maatkleding, reparatie, gordijnen en stomerij",
+  "start_url": "/",
+  "display": "standalone",
+  "background_color": "#ffffff",
+  "theme_color": "#06b6d4",
+  "icons": [
+    {
+      "src": "/favicon.svg",
+      "sizes": "any",
+      "type": "image/svg+xml"
+    }
+  ]
+}

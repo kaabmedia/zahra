@@ -2,10 +2,25 @@
 
 import { Button } from "@/components/ui/button"
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card"
-import { Phone, Scissors, Shirt, Sparkles, Ruler, Star, MapPin, Mail } from "lucide-react"
+import { Phone, Scissors, Shirt, Sparkles, Ruler, Star, MapPin, Mail, Clock, Facebook } from "lucide-react"
 import Link from "next/link"
+import { useEffect } from "react"
+import { MobileMenu } from "@/components/mobile-menu"
+import { ScrollToTop } from "@/components/scroll-to-top"
 
 export default function Home() {
+  useEffect(() => {
+    // Smooth scroll behavior
+    document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+      anchor.addEventListener('click', function (e) {
+        e.preventDefault()
+        const target = document.querySelector(this.getAttribute('href') as string)
+        if (target) {
+          target.scrollIntoView({ behavior: 'smooth', block: 'start' })
+        }
+      })
+    })
+  }, [])
   const services = [
     {
       title: "Maatkleding",
@@ -58,6 +73,7 @@ export default function Home() {
 
   return (
     <div className="min-h-screen bg-gradient-to-b from-white to-gray-50">
+      <ScrollToTop />
       {/* Header */}
       <header className="sticky top-0 z-50 w-full border-b bg-white/95 backdrop-blur supports-[backdrop-filter]:bg-white/60">
         <div className="container flex h-20 items-center justify-between px-4 md:px-8">
@@ -73,11 +89,17 @@ export default function Home() {
             <Link href="#reviews" className="text-sm font-medium hover:text-primary transition-colors">
               Reviews
             </Link>
+            <Link href="#contact" className="text-sm font-medium hover:text-primary transition-colors">
+              Contact
+            </Link>
           </nav>
-          <Button className="bg-gradient-to-r from-cyan-500 to-blue-500 hover:from-cyan-600 hover:to-blue-600">
-            <Phone className="mr-2 h-4 w-4" />
-            Bel: 015 - 785 148 40
-          </Button>
+          <div className="flex items-center gap-2">
+            <Button className="hidden sm:flex bg-gradient-to-r from-cyan-500 to-blue-500 hover:from-cyan-600 hover:to-blue-600">
+              <Phone className="mr-2 h-4 w-4" />
+              Bel: 015 - 785 148 40
+            </Button>
+            <MobileMenu />
+          </div>
         </div>
       </header>
 
@@ -165,6 +187,52 @@ export default function Home() {
         </div>
       </section>
 
+      {/* Why Choose Us Section */}
+      <section className="py-20 md:py-32 bg-white">
+        <div className="container px-4 md:px-8">
+          <div className="text-center mb-16">
+            <h2 className="text-4xl md:text-5xl font-bold tracking-tight mb-4">
+              Waarom kiezen voor Zahra?
+            </h2>
+            <p className="text-lg text-muted-foreground max-w-2xl mx-auto">
+              Ontdek waarom klanten keer op keer voor ons kiezen
+            </p>
+          </div>
+          
+          <div className="grid md:grid-cols-3 gap-8 max-w-5xl mx-auto">
+            <div className="text-center p-6 rounded-xl hover:bg-gray-50 transition-all">
+              <div className="inline-flex items-center justify-center w-16 h-16 rounded-full bg-gradient-to-r from-cyan-500 to-blue-500 text-white mb-4">
+                <Star className="h-8 w-8" />
+              </div>
+              <h3 className="text-xl font-semibold mb-2">Vakmanschap</h3>
+              <p className="text-muted-foreground">
+                Jaren ervaring met hoogste kwaliteit en aandacht voor detail
+              </p>
+            </div>
+            
+            <div className="text-center p-6 rounded-xl hover:bg-gray-50 transition-all">
+              <div className="inline-flex items-center justify-center w-16 h-16 rounded-full bg-gradient-to-r from-cyan-500 to-blue-500 text-white mb-4">
+                <Clock className="h-8 w-8" />
+              </div>
+              <h3 className="text-xl font-semibold mb-2">Snelle Service</h3>
+              <p className="text-muted-foreground">
+                Efficiënte afhandeling zonder in te leveren op kwaliteit
+              </p>
+            </div>
+            
+            <div className="text-center p-6 rounded-xl hover:bg-gray-50 transition-all">
+              <div className="inline-flex items-center justify-center w-16 h-16 rounded-full bg-gradient-to-r from-cyan-500 to-blue-500 text-white mb-4">
+                <Sparkles className="h-8 w-8" />
+              </div>
+              <h3 className="text-xl font-semibold mb-2">Persoonlijke Aandacht</h3>
+              <p className="text-muted-foreground">
+                Wij luisteren naar uw wensen en leveren maatwerk
+              </p>
+            </div>
+          </div>
+        </div>
+      </section>
+
       {/* Reviews Section */}
       <section id="reviews" className="py-20 md:py-32 bg-gradient-to-b from-gray-50 to-white">
         <div className="container px-4 md:px-8">
@@ -201,52 +269,118 @@ export default function Home() {
         </div>
       </section>
 
+      {/* Contact Section */}
+      <section id="contact" className="py-20 md:py-32 bg-gradient-to-br from-cyan-500 to-blue-500 text-white">
+        <div className="container px-4 md:px-8">
+          <div className="max-w-4xl mx-auto text-center">
+            <h2 className="text-4xl md:text-5xl font-bold tracking-tight mb-6">
+              Klaar om te beginnen?
+            </h2>
+            <p className="text-xl text-white/90 mb-8">
+              Neem vandaag nog contact met ons op voor al uw kleermakerij behoeften
+            </p>
+            
+            <div className="grid md:grid-cols-3 gap-6 mb-12">
+              <Card className="bg-white/10 border-white/20 backdrop-blur-sm hover:bg-white/20 transition-all">
+                <CardContent className="p-6 text-center">
+                  <Phone className="h-8 w-8 mx-auto mb-4" />
+                  <h3 className="font-semibold mb-2">Bel ons</h3>
+                  <p className="text-white/90">015 - 785 148 40</p>
+                </CardContent>
+              </Card>
+              
+              <Card className="bg-white/10 border-white/20 backdrop-blur-sm hover:bg-white/20 transition-all">
+                <CardContent className="p-6 text-center">
+                  <Mail className="h-8 w-8 mx-auto mb-4" />
+                  <h3 className="font-semibold mb-2">Email ons</h3>
+                  <p className="text-white/90 text-sm break-all">kleermakerij.zahra@hotmail.com</p>
+                </CardContent>
+              </Card>
+              
+              <Card className="bg-white/10 border-white/20 backdrop-blur-sm hover:bg-white/20 transition-all">
+                <CardContent className="p-6 text-center">
+                  <MapPin className="h-8 w-8 mx-auto mb-4" />
+                  <h3 className="font-semibold mb-2">Bezoek ons</h3>
+                  <p className="text-white/90">Oosthaven 52<br />2611 RB Delft</p>
+                </CardContent>
+              </Card>
+            </div>
+            
+            <Button size="lg" variant="secondary" className="text-lg">
+              <Phone className="mr-2 h-5 w-5" />
+              Bel nu: 015 - 785 148 40
+            </Button>
+          </div>
+        </div>
+      </section>
+
       {/* Footer */}
-      <footer className="border-t bg-gray-50">
+      <footer className="border-t bg-gray-900 text-white">
         <div className="container px-4 md:px-8 py-12">
           <div className="grid md:grid-cols-4 gap-8">
             <div className="space-y-4">
-              <div className="text-3xl font-bold bg-gradient-to-r from-cyan-500 to-blue-500 bg-clip-text text-transparent">
+              <div className="text-3xl font-bold bg-gradient-to-r from-cyan-400 to-blue-400 bg-clip-text text-transparent">
                 Zahra
               </div>
-              <Button className="bg-gradient-to-r from-cyan-500 to-blue-500 hover:from-cyan-600 hover:to-blue-600 w-full">
-                <Phone className="mr-2 h-4 w-4" />
-                015 - 785 148 40
-              </Button>
+              <p className="text-sm text-gray-400">
+                Uw vertrouwde kleermaker in Delft voor maatwerk, reparatie en meer.
+              </p>
             </div>
             
             <div>
-              <h3 className="font-semibold mb-4">Adres</h3>
-              <div className="space-y-2 text-sm text-muted-foreground">
-                <p>Oosthaven 52</p>
-                <p>2611 RB Delft</p>
+              <h3 className="font-semibold mb-4">Contact</h3>
+              <div className="space-y-3 text-sm text-gray-400">
+                <div className="flex items-start gap-2">
+                  <MapPin className="h-4 w-4 mt-0.5 flex-shrink-0" />
+                  <span>Oosthaven 52<br />2611 RB Delft</span>
+                </div>
+                <div className="flex items-center gap-2">
+                  <Phone className="h-4 w-4 flex-shrink-0" />
+                  <span>015 - 785 148 40</span>
+                </div>
+                <div className="flex items-start gap-2">
+                  <Mail className="h-4 w-4 mt-0.5 flex-shrink-0" />
+                  <span className="break-all">kleermakerij.zahra@hotmail.com</span>
+                </div>
               </div>
             </div>
             
             <div>
-              <h3 className="font-semibold mb-4">Sitemap</h3>
-              <div className="space-y-2 text-sm text-muted-foreground">
-                <Link href="#diensten" className="block hover:text-primary transition-colors">
-                  Diensten
+              <h3 className="font-semibold mb-4">Navigatie</h3>
+              <div className="space-y-2 text-sm text-gray-400">
+                <Link href="#diensten" className="block hover:text-cyan-400 transition-colors">
+                  Onze Diensten
                 </Link>
-                <Link href="#reviews" className="block hover:text-primary transition-colors">
-                  Reviews
+                <Link href="#reviews" className="block hover:text-cyan-400 transition-colors">
+                  Klantbeoordelingen
+                </Link>
+                <Link href="#contact" className="block hover:text-cyan-400 transition-colors">
+                  Contact
                 </Link>
               </div>
             </div>
             
             <div>
-              <h3 className="font-semibold mb-4">Sociale</h3>
-              <div className="space-y-2 text-sm text-muted-foreground">
-                <Link href="https://facebook.com" className="block hover:text-primary transition-colors">
-                  Facebook
+              <h3 className="font-semibold mb-4">Openingstijden</h3>
+              <div className="space-y-2 text-sm text-gray-400">
+                <div className="flex items-center gap-2">
+                  <Clock className="h-4 w-4" />
+                  <span>Ma - Vr: 09:00 - 18:00</span>
+                </div>
+                <p>Za: 10:00 - 17:00</p>
+                <p>Zo: Gesloten</p>
+              </div>
+              <div className="mt-4">
+                <Link href="https://facebook.com" className="inline-flex items-center gap-2 text-gray-400 hover:text-cyan-400 transition-colors">
+                  <Facebook className="h-5 w-5" />
+                  <span>Facebook</span>
                 </Link>
               </div>
             </div>
           </div>
           
-          <div className="border-t mt-12 pt-8 text-center text-sm text-muted-foreground">
-            <p>© 2026 Zahra Kleermakerij - Specialist door Kaabir/vakdoek</p>
+          <div className="border-t border-gray-800 mt-12 pt-8 text-center text-sm text-gray-400">
+            <p>© 2026 Zahra Kleermakerij - Specialist door Kaabir/vakdoek. Alle rechten voorbehouden.</p>
           </div>
         </div>
       </footer>

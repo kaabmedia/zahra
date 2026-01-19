@@ -3,6 +3,7 @@
 import { Button } from "@/components/ui/button"
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card"
 import { Phone, Scissors, Shirt, Sparkles, Ruler, Star, MapPin, Mail, Clock, Facebook } from "lucide-react"
+import Image from "next/image"
 import Link from "next/link"
 import { useEffect } from "react"
 import { MobileMenu } from "@/components/mobile-menu"
@@ -11,15 +12,29 @@ import { ScrollToTop } from "@/components/scroll-to-top"
 export default function Home() {
   useEffect(() => {
     // Smooth scroll behavior
-    document.querySelectorAll('a[href^="#"]').forEach(anchor => {
-      anchor.addEventListener('click', function (e) {
-        e.preventDefault()
-        const target = document.querySelector(this.getAttribute('href') as string)
-        if (target) {
-          target.scrollIntoView({ behavior: 'smooth', block: 'start' })
-        }
-      })
+    const anchors = document.querySelectorAll('a[href^="#"]')
+    const handleAnchorClick = (event: Event) => {
+      event.preventDefault()
+      const currentTarget = event.currentTarget as HTMLAnchorElement | null
+      const href = currentTarget?.getAttribute('href')
+      if (!href) {
+        return
+      }
+      const target = document.querySelector(href)
+      if (target) {
+        target.scrollIntoView({ behavior: 'smooth', block: 'start' })
+      }
+    }
+
+    anchors.forEach(anchor => {
+      anchor.addEventListener('click', handleAnchorClick)
     })
+
+    return () => {
+      anchors.forEach(anchor => {
+        anchor.removeEventListener('click', handleAnchorClick)
+      })
+    }
   }, [])
   const services = [
     {
@@ -139,12 +154,15 @@ export default function Home() {
                 </Button>
               </div>
             </div>
-            <div className="relative">
+            <div className="relative h-[500px]">
               <div className="absolute inset-0 bg-gradient-to-r from-cyan-500 to-blue-500 rounded-3xl blur-3xl opacity-20" />
-              <img
+              <Image
                 src="https://images.unsplash.com/photo-1512436991641-6745cdb1723f?w=1200&q=80"
                 alt="Kleermaker werkt met stof en maatlint"
-                className="relative rounded-3xl shadow-2xl w-full h-[500px] object-cover"
+                fill
+                priority
+                sizes="(min-width: 1024px) 50vw, 100vw"
+                className="relative rounded-3xl shadow-2xl object-cover"
               />
             </div>
           </div>
@@ -171,10 +189,12 @@ export default function Home() {
             {services.map((service, index) => (
               <Card key={index} className="overflow-hidden group hover:shadow-xl transition-all duration-300 border-2 hover:border-primary/50">
                 <div className="relative h-64 overflow-hidden">
-                  <img
+                  <Image
                     src={service.image}
                     alt={service.title}
-                    className="w-full h-full object-cover transition-transform duration-300 group-hover:scale-110"
+                    fill
+                    sizes="(min-width: 1024px) 25vw, (min-width: 768px) 50vw, 100vw"
+                    className="object-cover transition-transform duration-300 group-hover:scale-110"
                   />
                   <div className="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent" />
                   <div className="absolute bottom-4 left-4 flex items-center space-x-3">

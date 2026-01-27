@@ -177,9 +177,9 @@ zahra-kleermakerij/
 
 ## 📱 Contact
 
-- **Telefoon**: [015 - 785 148 40](tel:0157851840)
-- **Email**: [kleermakerij.zahra@hotmail.com](mailto:kleermakerij.zahra@hotmail.com)
-- **Adres**: Oosthaven 52, 2611 RB Delft
+- **Telefoon**: [015 - 785 1161](tel:0157851161)
+- **Email**: [zahra22@live.nl](mailto:zahra22@live.nl)
+- **Adres**: Gasthuislaan 52, 2611RB - Delft
 - **Openingstijden**: 
   - Ma - Vr: 09:00 - 18:00
   - Za: 10:00 - 17:00

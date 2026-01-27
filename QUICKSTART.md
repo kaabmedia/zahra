@@ -122,13 +122,13 @@ In `app/page.tsx`, zoek naar:
 
 ```typescript
 // Telefoon
-015 - 785 148 40
+015 - 785 1161
 
 // Email
-kleermakerij.zahra@hotmail.com
+zahra22@live.nl
 
 // Adres
-Oosthaven 52, 2611 RB Delft
+Gasthuislaan 52, 2611RB - Delft
 ```
 
 Vervang deze waarden met de nieuwe gegevens.
@@ -193,8 +193,8 @@ Open de browser en test:
 - **DEPLOYMENT.md** - Gedetailleerde deployment guide
 
 ### Contact
-- **Email**: kleermakerij.zahra@hotmail.com
-- **Telefoon**: 015 - 785 148 40
+- **Email**: zahra22@live.nl
+- **Telefoon**: 015 - 785 1161
 
 ### Online Resources
 - [Next.js Docs](https://nextjs.org/docs)

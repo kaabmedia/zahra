@@ -246,5 +246,5 @@ Met GitHub/GitLab integratie:
 ## 📞 Support
 
 Voor vragen over deployment:
-- Email: kleermakerij.zahra@hotmail.com
-- Tel: 015 - 785 148 40
+- Email: zahra22@live.nl
+- Tel: 015 - 785 1161

@@ -114,9 +114,9 @@ export default function Home() {
           </nav>
           <div className="flex items-center gap-3">
             <Button asChild className="hidden sm:flex bg-gradient-to-r from-cyan-500 to-blue-600 hover:from-cyan-600 hover:to-blue-700 shadow-lg shadow-cyan-500/20 hover:shadow-cyan-500/30 transition-all duration-300">
-              <a href="tel:0157851840" className="inline-flex items-center gap-2">
+              <a href="tel:0157851161" className="inline-flex items-center gap-2">
                 <Phone className="h-4 w-4" />
-                <span className="font-medium">015 - 785 1840</span>
+                <span className="font-medium">015 - 785 1161</span>
               </a>
             </Button>
             <MobileMenu />
@@ -131,11 +131,11 @@ export default function Home() {
         <div className="container relative px-4 md:px-8 lg:px-12 py-16 md:py-24 lg:py-32">
           <div className="grid lg:grid-cols-2 gap-12 lg:gap-16 items-center">
             <div className="space-y-8 lg:space-y-10">
-              <a href="mailto:kleermakerij.zahra@hotmail.com" className="inline-flex items-center gap-2 rounded-full border border-gray-200 bg-white px-4 py-2 text-sm shadow-sm hover:shadow-md hover:border-gray-300 transition-all duration-300">
+              <a href="mailto:zahra22@live.nl" className="inline-flex items-center gap-2 rounded-full border border-gray-200 bg-white px-4 py-2 text-sm shadow-sm hover:shadow-md hover:border-gray-300 transition-all duration-300">
                 <div className="flex items-center justify-center w-6 h-6 rounded-full bg-gradient-to-r from-cyan-500 to-blue-500">
                   <Mail className="h-3 w-3 text-white" />
                 </div>
-                <span className="text-gray-600 font-medium">kleermakerij.zahra@hotmail.com</span>
+                <span className="text-gray-600 font-medium">zahra22@live.nl</span>
               </a>
               <div className="space-y-4">
                 <h1 className="text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-bold tracking-tight text-gray-900 leading-[1.1]">
@@ -158,11 +158,11 @@ export default function Home() {
               </p>
               <div className="flex flex-col sm:flex-row gap-4">
                 <Button asChild size="lg" className="bg-gradient-to-r from-cyan-500 to-blue-600 hover:from-cyan-600 hover:to-blue-700 text-base font-semibold shadow-lg shadow-cyan-500/25 hover:shadow-xl hover:shadow-cyan-500/30 transition-all duration-300 h-14 px-8">
-                  <a href="tel:0157851840" className="inline-flex items-center gap-3">
+                  <a href="tel:0157851161" className="inline-flex items-center gap-3">
                     <div className="flex items-center justify-center w-8 h-8 rounded-full bg-white/20">
                       <Phone className="h-4 w-4" />
                     </div>
-                    015 - 785 1840
+                    015 - 785 1161
                   </a>
                 </Button>
                 <Button asChild size="lg" variant="outline" className="text-base font-semibold border-2 border-gray-200 hover:border-gray-300 hover:bg-gray-50 h-14 px-8 transition-all duration-300">
@@ -387,38 +387,38 @@ export default function Home() {
             </div>
 
             <div className="grid md:grid-cols-3 gap-5 lg:gap-6 mb-12">
-              <a href="tel:0157851840" className="group block">
+              <a href="tel:0157851161" className="group block">
                 <div className="relative h-full bg-white/5 backdrop-blur-sm rounded-2xl border border-white/10 p-6 hover:bg-white/10 hover:border-white/20 transition-all duration-300">
                   <div className="flex flex-col items-center text-center">
                     <div className="flex items-center justify-center w-14 h-14 rounded-2xl bg-gradient-to-br from-cyan-500 to-blue-600 text-white mb-5 shadow-lg shadow-cyan-500/20 group-hover:shadow-cyan-500/30 transition-shadow">
                       <Phone className="h-6 w-6" />
                     </div>
                     <h3 className="text-lg font-semibold text-white mb-2">Telefoon</h3>
-                    <p className="text-gray-400 group-hover:text-gray-300 transition-colors">015 - 785 1840</p>
+                    <p className="text-gray-400 group-hover:text-gray-300 transition-colors">015 - 785 1161</p>
                   </div>
                 </div>
               </a>
 
-              <a href="mailto:kleermakerij.zahra@hotmail.com" className="group block">
+              <a href="mailto:zahra22@live.nl" className="group block">
                 <div className="relative h-full bg-white/5 backdrop-blur-sm rounded-2xl border border-white/10 p-6 hover:bg-white/10 hover:border-white/20 transition-all duration-300">
                   <div className="flex flex-col items-center text-center">
                     <div className="flex items-center justify-center w-14 h-14 rounded-2xl bg-gradient-to-br from-cyan-500 to-blue-600 text-white mb-5 shadow-lg shadow-cyan-500/20 group-hover:shadow-cyan-500/30 transition-shadow">
                       <Mail className="h-6 w-6" />
                     </div>
                     <h3 className="text-lg font-semibold text-white mb-2">Email</h3>
-                    <p className="text-gray-400 group-hover:text-gray-300 transition-colors text-sm break-all">kleermakerij.zahra@hotmail.com</p>
+                    <p className="text-gray-400 group-hover:text-gray-300 transition-colors text-sm break-all">zahra22@live.nl</p>
                   </div>
                 </div>
               </a>
 
-              <a href="https://www.google.com/maps/search/?api=1&query=Oosthaven+52,+2611+RB+Delft" target="_blank" rel="noopener noreferrer" className="group block">
+              <a href="https://www.google.com/maps/search/?api=1&query=Gasthuislaan+52,+2611RB+Delft" target="_blank" rel="noopener noreferrer" className="group block">
                 <div className="relative h-full bg-white/5 backdrop-blur-sm rounded-2xl border border-white/10 p-6 hover:bg-white/10 hover:border-white/20 transition-all duration-300">
                   <div className="flex flex-col items-center text-center">
                     <div className="flex items-center justify-center w-14 h-14 rounded-2xl bg-gradient-to-br from-cyan-500 to-blue-600 text-white mb-5 shadow-lg shadow-cyan-500/20 group-hover:shadow-cyan-500/30 transition-shadow">
                       <MapPin className="h-6 w-6" />
                     </div>
                     <h3 className="text-lg font-semibold text-white mb-2">Bezoek Ons</h3>
-                    <p className="text-gray-400 group-hover:text-gray-300 transition-colors">Oosthaven 52<br />2611 RB Delft</p>
+                    <p className="text-gray-400 group-hover:text-gray-300 transition-colors">Gasthuislaan 52<br />2611RB - Delft</p>
                   </div>
                 </div>
               </a>
@@ -426,9 +426,9 @@ export default function Home() {
 
             <div className="text-center">
               <Button asChild size="lg" className="bg-gradient-to-r from-cyan-500 to-blue-600 hover:from-cyan-600 hover:to-blue-700 text-base font-semibold shadow-lg shadow-cyan-500/25 hover:shadow-xl hover:shadow-cyan-500/30 transition-all duration-300 h-14 px-10">
-                <a href="tel:0157851840" className="inline-flex items-center gap-3">
+                <a href="tel:0157851161" className="inline-flex items-center gap-3">
                   <Phone className="h-5 w-5" />
-                  Bel Nu: 015 - 785 1840
+                  Bel Nu: 015 - 785 1161
                 </a>
               </Button>
             </div>
@@ -460,17 +460,17 @@ export default function Home() {
             <div>
               <h3 className="text-sm font-semibold text-white uppercase tracking-wider mb-5">Contact</h3>
               <div className="space-y-4 text-sm">
-                <a href="https://www.google.com/maps/search/?api=1&query=Oosthaven+52,+2611+RB+Delft" target="_blank" rel="noopener noreferrer" className="flex items-start gap-3 text-gray-400 hover:text-white transition-colors group">
+                <a href="https://www.google.com/maps/search/?api=1&query=Gasthuislaan+52,+2611RB+Delft" target="_blank" rel="noopener noreferrer" className="flex items-start gap-3 text-gray-400 hover:text-white transition-colors group">
                   <MapPin className="h-5 w-5 mt-0.5 flex-shrink-0 text-gray-500 group-hover:text-cyan-400 transition-colors" />
-                  <span>Oosthaven 52<br />2611 RB Delft</span>
+                  <span>Gasthuislaan 52<br />2611RB - Delft</span>
                 </a>
-                <a href="tel:0157851840" className="flex items-center gap-3 text-gray-400 hover:text-white transition-colors group">
+                <a href="tel:0157851161" className="flex items-center gap-3 text-gray-400 hover:text-white transition-colors group">
                   <Phone className="h-5 w-5 flex-shrink-0 text-gray-500 group-hover:text-cyan-400 transition-colors" />
-                  <span>015 - 785 1840</span>
+                  <span>015 - 785 1161</span>
                 </a>
-                <a href="mailto:kleermakerij.zahra@hotmail.com" className="flex items-start gap-3 text-gray-400 hover:text-white transition-colors group">
+                <a href="mailto:zahra22@live.nl" className="flex items-start gap-3 text-gray-400 hover:text-white transition-colors group">
                   <Mail className="h-5 w-5 mt-0.5 flex-shrink-0 text-gray-500 group-hover:text-cyan-400 transition-colors" />
-                  <span className="break-all">kleermakerij.zahra@hotmail.com</span>
+                  <span className="break-all">zahra22@live.nl</span>
                 </a>
               </div>
             </div>

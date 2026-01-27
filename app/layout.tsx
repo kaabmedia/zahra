@@ -4,7 +4,7 @@ import './globals.css'
 export const metadata: Metadata = {
   title: 'Zahra Kleermakerij - Uw Kleermaker in Delft',
   description: 'Ontdek de perfecte pasvorm en vakmanschap bij Kleermakerij Zahra. Alles voor maatkleding, reparatie, gordijnen op maat en stomerij in Delft.',
-  keywords: 'kleermaker, kleermakerij, Delft, maatkleding, kledingreparatie, gordijnen op maat, stomerij, Zahra, Oosthaven',
+  keywords: 'kleermaker, kleermakerij, Delft, maatkleding, kledingreparatie, gordijnen op maat, stomerij, Zahra, Gasthuislaan',
   authors: [{ name: 'Zahra Kleermakerij' }],
   icons: {
     icon: [

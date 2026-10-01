@@ -512,7 +512,18 @@ export default function Home() {
           <div className="border-t border-white/10 mt-12 pt-8">
             <div className="flex flex-col md:flex-row items-center justify-between gap-4 text-sm text-gray-500">
               <p>© 2026 Kleermakerij Zahra. Alle rechten voorbehouden.</p>
-              <p>Ontwikkeld door <span className="text-gray-400">Kaabir</span></p>
+              <p>
+                Made by{" "}
+                <a
+                  href="https://kaabmedia.nl"
+                  target="_blank"
+                  // No noreferrer: the credit should show up as referral traffic.
+                  rel="noopener"
+                  className="font-semibold text-gray-400 hover:text-white transition-colors"
+                >
+                  KAAB®
+                </a>
+              </p>
             </div>
           </div>
         </div>
